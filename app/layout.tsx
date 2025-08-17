@@ -38,8 +38,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${courierPrime.className} antialiased`}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${courierPrime.className} antialiased`} suppressHydrationWarning>
         {children}
       </body>
     </html>

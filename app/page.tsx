@@ -69,7 +69,7 @@ export default function Home() {
         </div>
 
         {/* Terminal Section */}
-        <div className={`${isMobile ? ' w-full' : 'w-3/5 h-full'} overflow-auto relative`}>
+        <div className={`${isMobile ? ' w-full' : 'w-3/5 h-full'} overflow-auto scrollbar-hide relative`}>
           <Terminal commands={commands} />
         </div>
       </div>

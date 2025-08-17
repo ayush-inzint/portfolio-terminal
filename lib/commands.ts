@@ -213,8 +213,14 @@ export const commands = [
   },
   {
     name: 'sudo',
-    description: 'Run as administrator',
-    response: 'Hi, I\'m Mark Gatere, a Software & AI Engineer.',
+    description: 'Run with elevated privileges',
+    response: [
+      'Permission denied: You need admin privileges!',
+      '',
+      'Just kidding! 😄',
+      'This is a portfolio terminal, not a real system.',
+      'Feel free to explore using regular commands.',
+    ],
   },
   {
     name: 'clear',

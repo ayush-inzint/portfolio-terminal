@@ -21,22 +21,15 @@ body {
   font-family: 'Courier New', monospace;
 }
 
-.terminal-container {
-  scrollbar-width: thin;
-  scrollbar-color: #00ff00 #000000;
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
 
-.terminal-container::-webkit-scrollbar {
-  width: 8px;
-}
-
-.terminal-container::-webkit-scrollbar-track {
-  background: #000000;
-}
-
-.terminal-container::-webkit-scrollbar-thumb {
-  background-color: #00ff00;
-  border-radius: 4px;
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 .cursor {

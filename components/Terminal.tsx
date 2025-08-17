@@ -332,14 +332,17 @@ export default function Terminal({ commands }: { commands: Command[] }) {
 
   return (
     <div 
-      className="terminal-container w-full h-full overflow-y-auto bg-black text-green-500 font-mono px-4 pb-6"
+      className="terminal-container w-full h-full overflow-y-auto scrollbar-hide bg-black text-green-500 font-mono pb-6"
       onClick={focusInput}
     >
-      <div className="available-commands  py-4 text-sm border-b border-green-700 pb-2 md:fixed bg-black z-10 hidden md:block">
-        {availableCommands.join(' | ')}
+      <div className="sticky top-0 bg-black z-10 px-4 pt-4 pb-2">
+        <div className="text-sm text-gray-400">
+          {availableCommands.join(' | ')}
+        </div>
+        <div className="border-b border-green-700 mt-2"></div>
       </div>
       
-      <div className="command-history md:pt-16 pt-2">
+      <div className="command-history px-4 pt-2">
         {history.map((item, index) => (
           <div key={index} className="mb-4">
             <div className="command-line flex items-center">
@@ -357,7 +360,7 @@ export default function Terminal({ commands }: { commands: Command[] }) {
         ))}
       </div>
       
-      <div className="command-input flex items-center">
+      <div className="command-input flex items-center px-4">
         <span className="text-blue-400 mr-2">gatere@portfolio:~$</span>
         <div className="fake-input flex-1 relative">
           <span className="text-green-500">{input.substring(0, cursorPosition)}</span>
